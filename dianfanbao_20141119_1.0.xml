@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Electrics>
+	<Electric type="dianfanbao00001" name="电饭锅" detail="电器的描述" limit="40">
+		<Operation name="加热" detial="加热一段时间" code="30010"> 
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，超时时间"/>
+		<Argument name="火力" default="2" max="3" min="1" detial="火力等级，1是小火，2是中火，3是大火"/>
+	</Operation>
+		<Operation name="停止加热" detial="停止加热一段时间" code="30011"> 
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，超时时间"/>
+	</Operation>
+		<Operation name="沸腾" detial="维持沸腾一段时间" code="30012"> 
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，超时时间"/>
+		<Argument name="沸腾等级" default="0" max="2" min="0" detial="沸腾等级，数值越高，沸腾越猛"/>
+	</Operation>
+		<Operation name="焖" detial="焖一段时间" code="30013"> 
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，超时时间"/>
+	</Operation>
+		<Operation name="设置剩余时间" detial="设置整个过程的剩余时间，超时则自动进入保温状态" code="40013"> 
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，剩余时间"/>
+	</Operation>
+		<Operation name="自定义加热" detial="加热到某个温度，超时或者温度到达时进入下一步" code="20010"> 
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，超时时间"/>
+		<Argument name="底部火力" default="16" max="16" min="0" detial="火力等级，数值越大火力越大，最大值16"/>
+		<Argument name="底部温度" default="0" max="260" min="0" detial="高于此温度则进入下一步"/>
+		<Argument name="上盖火力" default="0" max="32" min="0" detial="火力等级，数值越大火力越大，最大值32"/>
+		<Argument name="上盖温度" default="0" max="260" min="0" detial="高于此温度则进入下一步"/>
+		<Argument name="涡轮开启温度" default="0" max="260" min="0" detial="高于此温度则开启涡轮风扇"/>
+	</Operation>
+		<Operation name="自定义恒温加热" detial="恒温加热，超时则进入下一步" code="20011">
+		<Argument name="时间" default="5" max="3600" min="1" detial="分钟，超时时间"/>
+		<Argument name="底部火力" default="16" max="16" min="0" detial="火力等级，数值越大火力越大，最大值16"/>
+		<Argument name="底部温度" default="0" max="260" min="0" detial="加热控制温度"/>
+		<Argument name="上盖火力" default="0" max="32" min="0" detial="火力等级，数值越大火力越大，最大值32"/>
+		<Argument name="上盖温度" default="0" max="260" min="0" detial="加热控制温度"/>
+		<Argument name="涡轮开启温度" default="0" max="260" min="0" detial="高于此温度则开启涡轮风扇"/>
+	</Operation>
+</Electric>
+</Electrics>

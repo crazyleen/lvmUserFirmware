@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Electrics>
+<Electric type="diancilu00001" name="电磁炉heavyii" detail="脚本版电磁炉" limit="40">
+	<Operation name="加热" detial="以设定的火力加热一段时间" code="20011"> 
+		<Argument name="时间" default="5" max="599" min="0" detial="分钟，加热时间，到时间后自动进入下一步"/>
+		<Argument name="火力" default="10" max="10" min="1" detial="火力等级，数值越高火力越大，最大值10"/>
+	</Operation>
+	<Operation name="设置剩余时间" detial="设置剩余时间" code="40013"> 
+		<Argument name="时间" default="180" max="599" min="1" detial="分钟，到时间后自动关机"/>
+	</Operation>
+	<Operation name="关机" detial="关机，工作结束" code="40011"> 
+	</Operation>
+</Electric>
+</Electrics>
